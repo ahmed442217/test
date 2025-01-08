@@ -1,0 +1,15 @@
+<div class="product py-2 my-3">
+    <a [routerLink]="['/productdetails',product.id]">
+    <img [src]="product.imageCover" class="w-100"/>
+    <p style="color: green;">{{product.category.name}}</p>
+    <h2  data-toggle="tooltip" data-toggle="tooltip" data-placement="top" [title]="product.title" class="h6" data-toggle="tooltip">{{product.title.split(" ").splice(0,2).join(" ")}}</h2>
+    <div class="d-flex justify-content-between">
+        <span>{{product.price}}$</span>
+        <div>
+            <i class="fa fa-star"></i>
+            {{product.ratingsAverage}}
+        </div>
+    </div>
+    </a>   
+    <button class="btn btn-success" (click)="addtocart(product.id)">اضف للسلة</button> 
+</div>    

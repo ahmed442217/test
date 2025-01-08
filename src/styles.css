@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+::-webkit-scrollbar {
+    width: 8px; /* عرض شريط الاسكرول */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fdfdfd; /* لون خلفية شريط الاسكرول */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #15f515; /* لون شريط الاسكرول نفسه */
+}

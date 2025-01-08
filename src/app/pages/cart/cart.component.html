@@ -1,0 +1,11 @@
+<p>cart works!</p>
+
+<div *ngIf="cartDetails.date">
+    <span>{{cartDetails.status}}</span>
+    <span>{{cartDetails.date.totalCartPrice}}</span>
+    <span>{{cartDetails.numOfCartItems}}</span>
+    <div *ngFor="let Product of cartDetails.date.products">
+        <span>{{Product.product.title}}</span>
+    </div>
+        
+</div>

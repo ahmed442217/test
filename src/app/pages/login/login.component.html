@@ -1,0 +1,22 @@
+<form class="w-50 m-auto mt-5" [formGroup]="loginform" (ngSubmit)="login(loginform)">
+    <div class="form-group mb-3">
+        <label for="email">email</label>
+        <input formControlName="email" type="email" id="email" class="form-control">
+        <div class="alert alert-danger p-1" *ngIf="loginform.get('email')?.errors && loginform.get('email')?.touched ">
+            <p *ngIf="loginform.get('email')?.getError('required')">failed is required</p>
+        </div>
+    </div>
+    <div class="form-group mb-3">
+        <label for="password">password</label>
+        <input formControlName="password" type="password" id="password" class="form-control">
+        <div class="alert alert-danger p-1" *ngIf="loginform.get('password')?.errors && loginform.get('password')?.touched ">
+            <p *ngIf="loginform.get('password')?.getError('required')">failed is required</p>
+        </div>
+    </div>
+
+    <button class="btn btn-success d-block m-auto w-50 " >
+        <i *ngIf="isloading" class="fa fa-spiner fa-spin">.  .</i>
+            <span *ngIf="!isloading" >submit</span>    
+    </button>  <!--[disabled]="loginform.invalid"-->
+    
+</form>
